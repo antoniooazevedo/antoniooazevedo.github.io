@@ -1,9 +1,58 @@
-/* GENERAL FONTS AND CLASSES AND SETUP STUFF */
+/* General Styles */
 * {
   box-sizing: border-box;
   transition: 0.35s ease;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  background: url('http://kingofwallpapers.com/leaves/leaves-016.jpg') right no-repeat;
+  background-size: cover;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  line-height: 40px;
+  color: black;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: black;
+}
+
+p.light {
+  color: #777;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.justified {
+  text-align: justify;
+}
+
+/* Layout Styles */
 .rela-block {
   display: block;
   position: relative;
@@ -13,13 +62,6 @@
 .rela-inline {
   display: inline-block;
   position: relative;
-  margin: auto;
-}
-
-.floated {
-  display: inline-block;
-  position: relative;
-  float: left;
 }
 
 .abs-center {
@@ -31,59 +73,7 @@
   width: 88%;
 }
 
-/* --- COLORS --- */
-
-/* --- PAGE STYLINGS --- */
-body {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  letter-spacing: 0px;
-  font-weight: 400;
-  line-height: 28px;
-  background: url('http://kingofwallpapers.com/leaves/leaves-016.jpg') right no-repeat;
-  background-size: cover;
-}
-
-body:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.92);
-}
-
-.caps {
-  text-transform: uppercase;
-}
-
-.justified {
-  text-align: justify;
-}
-
-p.light {
-  color: #777;
-}
-
-h2 {
-  font-family: 'Open Sans';
-  font-size: 30px;
-  letter-spacing: 5px;
-  font-weight: 600;
-  line-height: 40px;
-  color: black;
-}
-
-h3 {
-  font-family: 'Open Sans';
-  font-size: 21px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  line-height: 28px;
-  color: black;
-}
-
+/* Page Layout */
 .page {
   width: 90%;
   max-width: 1200px;
@@ -99,109 +89,57 @@ h3 {
 }
 
 .name {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: calc(350px + 5%);
+  position: relative;
+  top: 30%;
   height: 120px;
+  width: auto;
   text-align: center;
-  font-family: 'Raleway';
-  font-size: 58px;
-  letter-spacing: 8px;
-  font-weight: 100;
-  line-height: 60px;
-}
-
-.name div {
-  width: 94%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: white;
 }
 
 .side-bar {
   position: absolute;
-  top: 60px;
+  top: 220px;
   left: 5%;
   width: 350px;
   background-color: #F7E0C1;
   padding: 320px 30px 50px;
+  height: calc(100% - 220px);
 }
 
 .mugshot {
   position: absolute;
   top: 50px;
-  left: 70px;
-  height: 210px;
-  width: 210px;
-}
-
-.mugshot .logo {
-  margin: -23px;
-}
-
-.logo {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  margin: 0;
-  color: black;
+  left: 50px;
   height: 250px;
   width: 250px;
 }
 
-.logo .logo-svg {
+.mugshot img {
   height: 100%;
   width: 100%;
-  stroke: black;
-  cursor: pointer;
-}
-
-.logo .logo-text {
-  position: absolute;
-  top: 58%;
-  left: 16%;
-  cursor: pointer;
-  font-family: 'Montserrat';
-  font-size: calc(250px / 5 + 250px / 50);
-  letter-spacing: 0px;
-  font-weight: 400;
-  line-height: calc(250px / 5 + 250px / 30);
+  border-radius: 50%;
 }
 
 .social {
-  padding-left: 60px;
   margin-bottom: 20px;
+  font-size: medium;
+  text-align: center;
   cursor: pointer;
+  position: relative;
+  color: #0000EE;
 }
 
-.social:before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: 10px;
-  height: 35px;
-  width: 35px;
-  background-size: cover !important;
-}
-
-.social.twitter:before {
-  background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png') center no-repeat;
-}
-
-.social.pinterest:before {
-  background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png') center no-repeat;
-}
-
-.social.linked-in:before {
-  background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png') center no-repeat;
-}
 
 .side-header {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  letter-spacing: 4px;
   font-weight: 600;
+  letter-spacing: 4px;
   line-height: 28px;
   margin: 60px auto 10px;
   padding-bottom: 5px;
@@ -213,6 +151,7 @@ h3 {
   margin-bottom: 10px;
 }
 
+/* Content Container */
 .content-container {
   margin-right: 0;
   width: calc(95% - 350px);
@@ -227,7 +166,7 @@ h3 {
   margin: 0 auto 5px;
 }
 
-.content-container > p.long-margin {
+.content-container p.long-margin {
   margin: 0 auto 50px;
 }
 
@@ -247,21 +186,18 @@ h3 {
   width: 100%;
   max-width: 580px;
   text-align: center;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  letter-spacing: 6px;
   font-weight: 600;
+  letter-spacing: 6px;
   line-height: 28px;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 1150px) {
   .name {
-    color: white;
-    font-family: 'Raleway';
     font-size: 38px;
     letter-spacing: 6px;
-    font-weight: 100;
     line-height: 48px;
   }
 }
-
